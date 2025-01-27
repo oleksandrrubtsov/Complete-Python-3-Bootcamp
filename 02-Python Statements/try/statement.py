@@ -76,12 +76,71 @@
 # print(blackjack(9,9,9))
 # print(blackjack(9,9,11))
 
-def summer_69(arr):
-    for i in arr:
-        if i == range(6,9):
-            return None
-    # return sum(arr)
+# def summer_69(arr):
+#     for i in arr:
+#         if i == range(6,9):
+#             return None
+#     # return sum(arr)
 
-print(summer_69([1, 3, 5]))
-print(summer_69([4, 5, 6, 7, 8, 9]))
-print(summer_69([2, 1, 6, 9, 11]))
+# print(summer_69([1, 3, 5]))
+# print(summer_69([4, 5, 6, 7, 8, 9]))
+# print(summer_69([2, 1, 6, 9, 11]))
+
+
+# def up_low(s):
+#     uplist = 0
+#     lowlist = 0
+#     for x in s:
+#         if x.isupper():
+#             uplist += 1
+
+#         elif x.islower():
+#             lowlist += 1
+#     return f"No. of Upper case characters : {uplist}, No. of Lower case characters : {lowlist}"
+    
+    
+
+# print(up_low(s='Hello Mr. Rogers, how are you this fine Tuesday?'))
+
+# def unique_list(lst):
+#     unique = []
+#     for x in lst:
+#         if x not in unique:
+#             unique.append(x)
+#     return unique
+            
+        
+# print(unique_list([1,1,1,1,2,2,3,3,3,3,4,5]))
+
+
+# def multiply(numbers): 
+#     mul = 1
+#     for x in numbers:
+#         mul *=  x
+#     return mul    
+
+# print(multiply([1,2,3,-4]))
+
+
+# def palindrome(s):
+#     s = s.replace(" ","")
+#     if s == s[::-1]:
+#         return True
+#     else:
+#         return False
+
+# print(palindrome('madam'))
+# print(palindrome('kayak'))
+# print(palindrome('nurses run'))
+
+
+
+
+import string
+
+def ispangram(str1, alphabet=string.ascii_lowercase):
+    str1 = str1.replace(" ","")
+    str1_set = set(str1.lower())
+    return set(alphabet).issubset(str1_set)
+
+print(ispangram("The quick brown fox jumps over the lazy dog"))
